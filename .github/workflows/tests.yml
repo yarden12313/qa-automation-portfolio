@@ -11,4 +11,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r requirements.txt
+      - run: playwright install --with-deps
       - run: pytest tests/ -v --junitxml=results.xml
