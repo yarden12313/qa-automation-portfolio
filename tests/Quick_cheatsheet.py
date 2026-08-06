@@ -19,6 +19,9 @@ def countdown(n):
 # A decorator wraps a function to add behavior — logging, validation, timing — without modifying the original.
 # @decorator is shorthand for func = decorator(func).
 
+@my_decorator          # no () — my_decorator IS the decorator → 2 layers
+@retry(max_attempts=5) # has () — retry(...) must RETURN the decorator → 3 layers
+
 def my_decorator(func):
     def wrapper(*args, **kwargs):
         # before
