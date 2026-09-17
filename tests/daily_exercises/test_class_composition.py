@@ -1,8 +1,5 @@
 from dataclasses import dataclass, field
 
-from moto import stepfunctions
-from win32comext import ifilter
-
 
 @dataclass
 class TestStep:
