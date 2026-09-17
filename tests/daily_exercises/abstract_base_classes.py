@@ -62,3 +62,7 @@ def test_publish_results_works_with_any_reporter():
 def test_cannot_instantiate_abstract_class():
     with pytest.raises(TypeError):
         TestReporter()
+
+def test_cannot_instantiate_broken_reporter():
+    with pytest.raises(TypeError):
+        BrokenReporter()
